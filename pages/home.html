@@ -3,9 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
     <title>Home</title>
 </head>
 <body>
     <!-- Livia e Thalia -->
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+    <header class="bg-white">
+        <div class="w-[80%] mx-auto">
+            <div class="flex justify-between w-full gap-4 items-center">
+                <!-- Logo -->
+                <div class="logo flex items-center">
+                    <img src="../assets/logo.svg" alt="Logo" class="w-8">
+                    <h1 class="font-semibold text-4xl text-[#c92071] ml-1 text-nowrap">Digital Store</h1>
+                </div>
+                <!-- Search -->
+                <div class="flex py-8">
+                    <input type="text" value="Tênis" class="w-120 rounded-l-lg px-6 py-4 bg-[#474747] opacity-[4%]">
+                    <img src="../assets/Search.svg" alt="" class="px-6 py-4 bg-[#474747]/4 bg-opacity-[50%] rounded-r-lg">
+                </div>
+
+                <div class="sing">
+                    <button class="border-b cursor-pointer">Cadastre-se</button>
+                    <button class="bg-[#c92071] text-white py-2 px-12 rounded-lg ml-4">Entrar</button>
+
+                </div>
+
+                <div>
+                    <img src="../assets/Buy.svg" alt="">
+                </div>
+            </div>
+
+            <nav>
+                <ul class="flex gap-8 text-[#474747]">
+                    <li class="border-b text-[#c92071]"><a href="">HOME</a> </li>
+                    <li><a href="">PRODUTOS</a> </li>
+                    <li><a href="">CATEGORIAS</a> </li>
+                    <li><a href="">MEUS PEDIDOS</a> </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+    </main>
+
+    <footer class="bg-black text-white">
+        <!-- Content-footer -->
+        <div class="w-[80%] mx-auto pt-18">
+            <div class="flex font-extralight justify-between">
+                <!-- logo-footer -->
+                <div class="items-center w-[25%]">
+                    <div class="flex gap-1">
+                        <img src="../assets/logo-footer.png" alt="">
+                        <h2 class="text-4xl font-bold">Digital Store</h2>
+                    </div>
+                    <p class="my-9">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit aliquam enim,
+                        dolor</p>
+                    <div>
+                        <img src="../assets/redes-sociais-footer.png" alt="">
+                    </div>
+                </div>
+
+                <!-- Informação -->
+                <div class="flex flex-col h-69 justify-between">
+                    <h2 class="font-bold mb-4">Informação</h2>
+                    <a href="">Sobre Drip Store</a>
+                    <a href="">Segunça</a>
+                    <a href="">Wishlist</a>
+                    <a href="">Blog</a>
+                    <a href="">Trabalhe conosco</a>
+                    <a href="">Meus pedidos</a>
+                </div>
+
+                <!-- Categorias -->
+                <div class="flex flex-col h-60 justify-between">
+                    <h2 class="font-bold mb-4">Categorias</h2>
+                    <a href="">Camisetas</a>
+                    <a href="">Calças</a>
+                    <a href="">Bonés</a>
+                    <a href="">Headphones</a>
+                    <a href="">Tênis</a>
+                </div>
+
+                <!-- Contato -->
+                <div class="flex flex-col h-42 w-56 justify-between">
+                    <h2 class="font-bold mb-4">Contato</h2>
+                    <p>Av. Santos Dumont, 1510 - 1 andar - Aldeota, Fortaleza - CE, 60150-161</p>
+                    <p>(85) 3051-3411</p>
+                </div>
+            </div>
+            <div class="w-full h-[1px] bg-gray-500 my-4"></div>
+            <!-- Copyrigth -->
+            <div class="text-center pb-2">
+                <p>© 2022 Digital College</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
