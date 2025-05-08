@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
     <title>Produto</title>
 </head>
-<body>
+
+<body class="bg-[#F9F8FE]">
     <!-- Leo e Rafael -->
     <style>
         * {
@@ -15,7 +19,7 @@
         }
     </style>
     <header class="bg-white">
-        <div class="w-[80%] mx-auto">
+        <div class="w-[86%] mx-auto">
             <div class="flex justify-between w-full gap-4 items-center">
                 <!-- Logo -->
                 <div class="logo flex items-center">
@@ -24,8 +28,9 @@
                 </div>
                 <!-- Search -->
                 <div class="flex py-8">
-                    <input type="text" value="Tênis" class="w-120 rounded-l-lg px-6 py-4 bg-[#474747] opacity-[4%]">
-                    <img src="../assets/Search.svg" alt="" class="px-6 py-4 bg-[#474747]/4 bg-opacity-[50%] rounded-r-lg">
+                    <input type="text" value="" class="w-120 rounded-l-lg px-6 py-4 bg-[#474747]/4 outline-0" id="searchInput">
+                    <img src="../assets/Search.svg" alt=""
+                        class="px-6 py-4 bg-[#474747]/4 bg-opacity-[50%] rounded-r-lg" onclick="(buscar())">
                 </div>
 
                 <div class="sing">
@@ -41,99 +46,121 @@
 
             <nav>
                 <ul class="flex gap-8 text-[#474747]">
-                    <li class="border-b text-[#c92071]"><a href="">HOME</a> </li>
-                    <li><a href="">PRODUTOS</a> </li>
+                    <li><a href="./home.html">HOME</a> </li>
+                    <li class="border-b text-[#c92071]"><a href="./produto.html">PRODUTOS</a> </li>
                     <li><a href="">CATEGORIAS</a> </li>
                     <li><a href="">MEUS PEDIDOS</a> </li>
                 </ul>
             </nav>
         </div>
     </header>
+  
+    <main class="min-h-screen w-[86%] mx-auto mb-20">
+        <!-- Ordernação -->
+        <section class="flex justify-between py-10 items-center">
+            <p class="font-bold" id="resultadoBusca"></p>
+            <div class="border p-4 w-[30%] rounded-sm">
+                <label for="" class="font-bold">Ordenar por:</label>
+                <select id="" name="" class="pr-23 font-light">
+                    <option value="">Mais relevantes</option>
+                    <option value="">Preço</option>
+                </select>
+            </div>
+        </section>
 
-    <main>
-        <aside class="m-10">
-            <h1 class="flex justify-start font-bold  p-2">Filtrar por</h1>
-            <ul>
-                <p class="flex justify-start font-bold p-2">Marca</p>
-                <li>
-                    <div class="flex items-center">
-                        <input class="accent-pink-500" type="checkbox" name="" id="">
-                        <label class="ml-2" for="">Adidas</label>
-                    </div>
-                    <div class="flex items-center">
-                        <input class="accent-pink-500" type="checkbox" name="" id="">
-                        <label class="ml-2" for="">Calenciaga</label>
-                    </div>
-                    <div class="flex items-center">
-                        <input class="accent-pink-500" type="checkbox" name="" id="">
-                        <label class="ml-2" for="">K-Swiss</label>
-                    </div>
-                    <div class="flex items-center">
-                        <input class="accent-pink-500" type="checkbox" name="" id="">
-                        <label class="ml-2" for="">Nike</label>
-                    </div>
-                    <div class="flex items-center">
-                        <input class="accent-pink-500" type="checkbox" name="" id="">
-                        <label class="ml-2" for="">Puma</label>
-                    </div>   
-                
-                <p class="font-bold p-2">Categoria</p>
-                <li>
-                    <div class="">
-                        <input type="checkbox" name="" id="">
-                        <label for="">Esporte e lazer</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="" id="">
-                        <label for="">Casual</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="" id="">
-                        <label for="">Utilitário</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="" id="">
-                        <label for="">Corrida</label>
-                    </div>
-                    
-                </li>
-                <p class="font-bold p-2">Gênero</p>
-                <li>
-                    <div class="">
-                        <input type="checkbox" name="" id="">
-                        <label for="">Masculino</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="" id="">
-                        <label for="">Feminino</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="" id="">
-                        <label class="" for="">Unisex</label>
-                    </div>
-                    
-                </li>
-                <p class="font-bold p-2">Estado</p>
-                <li>
-                    <div class="">
-                        <input type="checkbox" name="" id="">
-                        <label class="" for="">Novo</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="" id="">
-                        <label class=" " for="">Usado</label>
-                    </div>
-                    
-                </li>
-            </ul>
-        </aside>
-        
-        
+        <section class="flex gap-7">
+            <!-- Filtro -->
+            <aside class="px-[30px] w-77 bg-white h-fit py-5">
+                <h2 class="">Filtrar por</h2>
+                <div class="w-full bg-[#cccccc] h-[1px] my-5"></div>
+
+                <form class=" text-sm ">
+                    <ul>
+                        <p class="flex justify-start font-bold mb-2">Marca</p>
+                        <li>
+                            <div class="flex items-center">
+                                <input class="accent-pink-500" type="checkbox" name="" id="">
+                                <label class="ml-2" for="">Adidas</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input class="accent-pink-500" type="checkbox" name="" id="">
+                                <label class="ml-2" for="">Calenciaga</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input class="accent-pink-500" type="checkbox" name="" id="">
+                                <label class="ml-2" for="">K-Swiss</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input class="accent-pink-500" type="checkbox" name="" id="">
+                                <label class="ml-2" for="">Nike</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input class="accent-pink-500" type="checkbox" name="" id="">
+                                <label class="ml-2" for="">Puma</label>
+                            </div>   
+                        
+                        <p class="font-bold my-2">Categoria</p>
+                        <li>
+                            <div class="">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Esporte e lazer</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="" id="">
+                                <label for="">Casual</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="" id="">
+                                <label for="">Utilitário</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="" id="">
+                                <label for="">Corrida</label>
+                            </div>
+                            
+                        </li>
+                        <p class="font-bold my-2">Gênero</p>
+                        <li>
+                            <div class="">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Masculino</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="" id="">
+                                <label for="">Feminino</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="" id="">
+                                <label class="" for="">Unisex</label>
+                            </div>
+                            
+                        </li>
+                        <p class="font-bold my-2">Estado</p>
+                        <li>
+                            <div class="">
+                                <input type="checkbox" name="" id="">
+                                <label class="" for="">Novo</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="" id="">
+                                <label class=" " for="">Usado</label>
+                            </div>
+                            
+                        </li>
+                    </ul>
+                </form>
+            </aside>
+            <!-- Cards -->
+            <div class="grid grid-cols-3 gap-2" id="cards">
+
+            </div>
+        </section>
+  
     </main>
 
     <footer class="bg-black text-white">
         <!-- Content-footer -->
-        <div class="w-[80%] mx-auto pt-18">
+        <div class="w-[86%] mx-auto pt-18">
             <div class="flex font-extralight justify-between">
                 <!-- logo-footer -->
                 <div class="items-center w-[25%]">
@@ -183,5 +210,7 @@
             </div>
         </div>
     </footer>
+    <script src="../js/produto.js"></script>
 </body>
+
 </html>
