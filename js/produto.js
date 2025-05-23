@@ -132,6 +132,13 @@ function buscar(){
          `
      }).join("")
 
-
+function desmarcarOutros(checkbox) {
+const checkboxes = document.querySelectorAll('input[type="checkbox"][name="opcao"]');
+checkboxes.forEach(function(cb) {
+if (cb !== checkbox) {
+cb.checked = false;
+}
+});
+}
 
 }
